@@ -32,7 +32,8 @@ namespace UI
             this.lblTicketView = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnCreateTicket = new System.Windows.Forms.Button();
-            this.listTickets = new System.Windows.Forms.ListBox();
+            this.dataTicket = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTicketView
@@ -61,25 +62,29 @@ namespace UI
             this.btnCreateTicket.Text = "Create Incident";
             this.btnCreateTicket.UseVisualStyleBackColor = true;
             // 
-            // listTickets
+            // dataTicket
             // 
-            this.listTickets.FormattingEnabled = true;
-            this.listTickets.Location = new System.Drawing.Point(50, 191);
-            this.listTickets.Name = "listTickets";
-            this.listTickets.Size = new System.Drawing.Size(698, 238);
-            this.listTickets.TabIndex = 3;
+            this.dataTicket.AllowUserToAddRows = false;
+            this.dataTicket.AllowUserToDeleteRows = false;
+            this.dataTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTicket.Location = new System.Drawing.Point(50, 191);
+            this.dataTicket.Name = "dataTicket";
+            this.dataTicket.ReadOnly = true;
+            this.dataTicket.Size = new System.Drawing.Size(698, 238);
+            this.dataTicket.TabIndex = 4;
             // 
             // Ticket_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listTickets);
+            this.Controls.Add(this.dataTicket);
             this.Controls.Add(this.btnCreateTicket);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblTicketView);
             this.Name = "Ticket_overview";
             this.Text = "Ticket_overview";
+            ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +95,6 @@ namespace UI
         private System.Windows.Forms.Label lblTicketView;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnCreateTicket;
-        private System.Windows.Forms.ListBox listTickets;
+        private System.Windows.Forms.DataGridView dataTicket;
     }
 }

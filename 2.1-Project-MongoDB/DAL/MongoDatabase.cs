@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
+using Model;
 
 namespace DAL
 {
@@ -12,11 +13,13 @@ namespace DAL
     {
         public static MongoClient client;
         public static IMongoDatabase database;
+        public static IMongoCollection<User> userCollection;
 
         static MongoDatabase()
         {
-            client = new MongoClient("mongodb+srv://PabloG:1234@firstproject.z3gmq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-            database = client.GetDatabase("NoDeskApplication");
+            client = new MongoClient("mongodb://SasaB:1234@cluster0-shard-00-00.rexjc.mongodb.net:27017,cluster0-shard-00-01.rexjc.mongodb.net:27017,cluster0-shard-00-02.rexjc.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-6j34y8-shard-0&authSource=admin&retryWrites=true&w=majority");
+            database = client.GetDatabase("NoDesktopApplication");
+            userCollection = database.GetCollection<User>("User");
         }
     }
 }

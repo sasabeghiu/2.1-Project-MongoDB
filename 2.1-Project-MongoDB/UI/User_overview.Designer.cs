@@ -32,7 +32,12 @@ namespace UI
             this.lblUserView = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnAddUser = new System.Windows.Forms.Button();
-            this.listUsers = new System.Windows.Forms.ListBox();
+            this.dataUser = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUserView
@@ -61,25 +66,59 @@ namespace UI
             this.btnAddUser.Text = "+ ADD NEW USER";
             this.btnAddUser.UseVisualStyleBackColor = true;
             // 
-            // listUsers
+            // dataUser
             // 
-            this.listUsers.FormattingEnabled = true;
-            this.listUsers.Location = new System.Drawing.Point(50, 191);
-            this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(698, 238);
-            this.listUsers.TabIndex = 3;
+            this.dataUser.AllowUserToAddRows = false;
+            this.dataUser.AllowUserToDeleteRows = false;
+            this.dataUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.first_name,
+            this.last_name,
+            this.email});
+            this.dataUser.Location = new System.Drawing.Point(50, 191);
+            this.dataUser.Name = "dataUser";
+            this.dataUser.ReadOnly = true;
+            this.dataUser.Size = new System.Drawing.Size(698, 238);
+            this.dataUser.TabIndex = 4;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // first_name
+            // 
+            this.first_name.HeaderText = "first_name";
+            this.first_name.Name = "first_name";
+            this.first_name.ReadOnly = true;
+            // 
+            // last_name
+            // 
+            this.last_name.HeaderText = "last_name";
+            this.last_name.Name = "last_name";
+            this.last_name.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // User_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listUsers);
+            this.Controls.Add(this.dataUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblUserView);
             this.Name = "User_overview";
             this.Text = "User_overview";
+            this.Load += new System.EventHandler(this.User_overview_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +129,10 @@ namespace UI
         private System.Windows.Forms.Label lblUserView;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnAddUser;
-        private System.Windows.Forms.ListBox listUsers;
+        private System.Windows.Forms.DataGridView dataUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

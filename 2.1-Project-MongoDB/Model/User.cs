@@ -18,29 +18,31 @@ namespace Model
 
         public User(string firstName, string lastName, string email, string password)
         {
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.email = email;
-            this.password = password;
+            this.First_name = firstName;
+            this.Last_name = lastName;
+            this.Email = email;
+            this.Password = password;
         }
 
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId id { get; set; }
+        /*[BsonElement("id")]
+        public int id { get; set; }*/
 
         [BsonElement("first_name")]
-        public string first_name { get; set; }
+        public string First_name { get; set; }
 
         [BsonElement("last_name")]
-        public string last_name { get; set; }
+        public string Last_name { get; set; }
 
         [BsonElement("email")]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [BsonElement("password")]
-        public string password { get; set; }
+        public string Password { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         [BsonRepresentation(BsonType.String)]
-        public UserType type { get; set; }
+        public UserType Type { get; set; }
     }
 }

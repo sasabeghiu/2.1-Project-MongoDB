@@ -65,6 +65,7 @@ namespace UI
             this.btnAddUser.TabIndex = 2;
             this.btnAddUser.Text = "+ ADD NEW USER";
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // dataUser
             // 
@@ -116,6 +117,7 @@ namespace UI
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblUserView);
             this.Name = "User_overview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_overview";
             this.Load += new System.EventHandler(this.User_overview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataUser)).EndInit();

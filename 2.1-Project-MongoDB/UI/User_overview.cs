@@ -33,5 +33,14 @@ namespace UI
                 dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
             }
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NewUser form = new NewUser();
+            form.ShowDialog();
+            this.Close();
+            
+        }
     }
 }

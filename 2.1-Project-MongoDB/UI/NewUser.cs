@@ -15,22 +15,25 @@ namespace UI
     public partial class NewUser : Form
     {
         private UserService userService;
-        public NewUser()
+        private User currentUser;
+        public NewUser(User user)
         {
             InitializeComponent();
+            currentUser = user;
+            lblLogin.Text = user.First_name + user.Last_name;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //geting info from ui to object
-            User user = new User();
-            user.First_name = textBoxfname.Text;
-            user.Last_name = textBoxlname.Text;
+            User newUser = new User();
+            newUser.First_name = textBoxfname.Text;
+            newUser.Last_name = textBoxlname.Text;
             comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
-            user.Type = (UserType)comboBoxuser.SelectedItem;
-            user.Email = textBoxemail.Text;
-            user.Phone = int.Parse(textBoxphone.Text);
+            newUser.Type = (UserType)comboBoxuser.SelectedItem;
+            newUser.Email = textBoxemail.Text;
+            newUser.Phone = int.Parse(textBoxphone.Text);
             comboBoxlocation.DataSource = Enum.GetValues(typeof(UserLocation));
-            user.Location = (UserLocation)comboBoxlocation.SelectedItem;
+            newUser.Location = (UserLocation)comboBoxlocation.SelectedItem;
 
 
             if (checkBoxpassword.Checked)
@@ -39,7 +42,7 @@ namespace UI
             }
 
             //adding user to database
-            userService.NewUser(user);
+            userService.NewUser(newUser);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -55,12 +58,10 @@ namespace UI
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            /*
             this.Hide();
-            Dashboard dashboard = new Dashboard();
+            Dashboard dashboard = new Dashboard(currentUser);
             dashboard.ShowDialog();
             this.Close();
-            */
         }
 
         private void btnUM_Click(object sender, EventArgs e)

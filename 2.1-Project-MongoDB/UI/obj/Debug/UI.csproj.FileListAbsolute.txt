@@ -152,3 +152,5 @@ D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\U
 >>>>>>> 5e92e90de8a9506f0f4aec01c0433b58ef9bff4b
 D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.Dashboard.resources
 D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.Login.resources
+D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.Dashboard.resources
+D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.Login.resources

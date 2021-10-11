@@ -62,6 +62,7 @@ namespace UI
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "ADD USER";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -252,6 +253,7 @@ namespace UI
             this.btnUM.TabIndex = 11;
             this.btnUM.Text = "User Management";
             this.btnUM.UseVisualStyleBackColor = true;
+            this.btnUM.Click += new System.EventHandler(this.btnUM_Click);
             // 
             // NewUser
             // 

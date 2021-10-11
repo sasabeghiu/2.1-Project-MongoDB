@@ -20,6 +20,11 @@ namespace Logic
             this.users = MongoDatabase.userCollection.Find(new BsonDocument()).ToList();
             return this.users;
         }
+
+        public void NewUser (User user)
+        {
+            MongoDatabase.userCollection.InsertOne(user);
+        }
     }
 
     

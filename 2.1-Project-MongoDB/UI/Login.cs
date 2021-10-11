@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,15 +28,16 @@ namespace UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if ((txtUsername.Text == "") || (txtPassword.Text == ""))
-            {
-                MessageBox.Show("Please fill in both useranme and password", "Attention");
-                return;
-            }
-
             try
             {
+                if ((txtUsername.Text == "") || (txtPassword.Text == ""))
+                {
+                    MessageBox.Show("Please fill in both useranme and password", "Attention");
+                    return;
+                }
+
                 User user = userService.UserLogin(txtUsername.Text, txtPassword.Text);
+
                 if (user == null)
                 {
                     MessageBox.Show("Wrong username or password", "Login Failed");
@@ -52,12 +54,18 @@ namespace UI
 
             catch (Exception ex)
             {
-
+                ErrorProcess(ex, "Something went wrong while loging in");
             }
-
-
-
-
+        }
+        private void ErrorProcess(Exception ex, string messege)
+        {
+            MessageBox.Show(messege, "Error occured");
+            // write to error log file
+            StreamWriter sw = File.AppendText("..\\..\\..\\Error Log.txt");
+            sw.WriteLine(messege);
+            Console.WriteLine(ex);
+            Console.WriteLine();
+            sw.Close();
         }
     }
 }

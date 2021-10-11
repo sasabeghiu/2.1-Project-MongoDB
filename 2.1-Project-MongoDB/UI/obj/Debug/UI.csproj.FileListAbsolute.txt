@@ -95,6 +95,7 @@ D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.CoreCompileInp
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.CopyComplete
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.exe
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.pdb
+<<<<<<< HEAD
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\bin\Debug\snappy32.dll
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\bin\Debug\snappy64.dll
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\bin\Debug\libzstd.dll
@@ -146,3 +147,6 @@ C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\U
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.exe
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.pdb
 C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.Dashboard.resources
+=======
+D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.NewUser.resources
+>>>>>>> 5e92e90de8a9506f0f4aec01c0433b58ef9bff4b

@@ -83,6 +83,7 @@ namespace UI
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblTicketView);
             this.Name = "Ticket_overview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket_overview";
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).EndInit();
             this.ResumeLayout(false);

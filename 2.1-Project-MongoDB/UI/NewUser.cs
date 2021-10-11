@@ -14,14 +14,10 @@ namespace UI
 {
     public partial class NewUser : Form
     {
-<<<<<<< Updated upstream
-        private UserService userService;
         private User currentUser;
-        public NewUser(User user)
-=======
+
         private readonly UserService userService;
-        public NewUser()
->>>>>>> Stashed changes
+        public NewUser(User user)
         {
             InitializeComponent();
             currentUser = user;
@@ -30,17 +26,15 @@ namespace UI
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             //geting info from ui to object
-<<<<<<< Updated upstream
             User newUser = new User();
             newUser.First_name = textBoxfname.Text;
             newUser.Last_name = textBoxlname.Text;
-=======
             User user = new User
             {
                 First_name = textBoxfname.Text,
                 Last_name = textBoxlname.Text
             };
->>>>>>> Stashed changes
+
             comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
             newUser.Type = (UserType)comboBoxuser.SelectedItem;
             newUser.Email = textBoxemail.Text;

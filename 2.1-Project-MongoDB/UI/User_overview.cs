@@ -36,11 +36,12 @@ namespace UI
 
         private void BtnAddUser_Click(object sender, EventArgs e)
         {
+            /*
             this.Hide();
             NewUser form = new NewUser();
             form.ShowDialog();
             this.Close();
-            
+            */
         }
 
         private void TxtFilter_TextChanged(object sender, EventArgs e)

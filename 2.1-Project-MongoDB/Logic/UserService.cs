@@ -20,6 +20,12 @@ namespace Logic
             this.users = MongoDatabase.userCollection.Find(new BsonDocument()).ToList();
             return this.users;
         }
+
+        public User UserLogin(string email, string password)
+        {
+            User user = MongoDatabase.userCollection.Find(x => x.Email == email & x.Password == password).FirstOrDefault();
+            return user;
+        }
     }
 
     

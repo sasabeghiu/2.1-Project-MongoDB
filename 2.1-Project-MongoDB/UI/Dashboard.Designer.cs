@@ -1,7 +1,7 @@
 ﻿
 namespace UI
 {
-    partial class Form1
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,33 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblLoggedIn = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lblLoggedIn
+            // 
+            this.lblLoggedIn.AutoSize = true;
+            this.lblLoggedIn.Location = new System.Drawing.Point(30, 36);
+            this.lblLoggedIn.Name = "lblLoggedIn";
+            this.lblLoggedIn.Size = new System.Drawing.Size(55, 13);
+            this.lblLoggedIn.TabIndex = 0;
+            this.lblLoggedIn.Text = "Username";
+            // 
+            // Dashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.lblLoggedIn);
+            this.Name = "Dashboard";
+            this.Text = "Dashboard";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblLoggedIn;
     }
 }
-

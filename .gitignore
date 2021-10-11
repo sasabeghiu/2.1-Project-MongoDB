@@ -6,6 +6,13 @@
 *.user
 *.sln.docstates
 
+#cahce files
+*.suo
+*.cache
+*.dll
+*.pdb
+*.txt
+
 # Build results
 
 [Dd]ebug/

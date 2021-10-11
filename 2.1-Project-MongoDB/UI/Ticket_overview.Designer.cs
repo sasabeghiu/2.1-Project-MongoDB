@@ -33,6 +33,12 @@ namespace UI
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnCreateTicket = new System.Windows.Forms.Button();
             this.dataTicket = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +73,54 @@ namespace UI
             this.dataTicket.AllowUserToAddRows = false;
             this.dataTicket.AllowUserToDeleteRows = false;
             this.dataTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTicket.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Subject,
+            this.User,
+            this.Date,
+            this.Priority,
+            this.Deadline});
             this.dataTicket.Location = new System.Drawing.Point(50, 191);
             this.dataTicket.Name = "dataTicket";
             this.dataTicket.ReadOnly = true;
             this.dataTicket.Size = new System.Drawing.Size(698, 238);
             this.dataTicket.TabIndex = 4;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // User
+            // 
+            this.User.HeaderText = "User";
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Priority
+            // 
+            this.Priority.HeaderText = "Priority";
+            this.Priority.Name = "Priority";
+            this.Priority.ReadOnly = true;
+            // 
+            // Deadline
+            // 
+            this.Deadline.HeaderText = "Deadline";
+            this.Deadline.Name = "Deadline";
+            this.Deadline.ReadOnly = true;
             // 
             // Ticket_overview
             // 
@@ -85,6 +134,7 @@ namespace UI
             this.Name = "Ticket_overview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket_overview";
+            this.Load += new System.EventHandler(this.Ticket_overview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,5 +147,11 @@ namespace UI
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnCreateTicket;
         private System.Windows.Forms.DataGridView dataTicket;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
     }
 }

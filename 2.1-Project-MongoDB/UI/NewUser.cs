@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 using Model;
@@ -14,34 +7,28 @@ namespace UI
 {
     public partial class NewUser : Form
     {
-        private User currentUser;
+        private readonly User currentUser;
+        private readonly UserService userService= new UserService();
 
-        private readonly UserService userService;
         public NewUser(User user)
         {
             InitializeComponent();
             currentUser = user;
-            lblLogin.Text = user.First_name + user.Last_name;
+            lblLogin.Text = user.Last_name + ", " + user.First_name;
         }
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             //geting info from ui to object
             User newUser = new User();
             newUser.First_name = textBoxfname.Text;
             newUser.Last_name = textBoxlname.Text;
-            User user = new User
-            {
-                First_name = textBoxfname.Text,
-                Last_name = textBoxlname.Text
-            };
-
             comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
             newUser.Type = (UserType)comboBoxuser.SelectedItem;
             newUser.Email = textBoxemail.Text;
             newUser.Phone = int.Parse(textBoxphone.Text);
             comboBoxlocation.DataSource = Enum.GetValues(typeof(UserLocation));
             newUser.Location = (UserLocation)comboBoxlocation.SelectedItem;
-
 
             if (checkBoxpassword.Checked)
             {
@@ -74,8 +61,16 @@ namespace UI
         private void BtnUM_Click(object sender, EventArgs e)
         {
             this.Hide();
-            User_overview form = new User_overview();
-            form.ShowDialog();
+            User_overview userManagement = new User_overview(currentUser);
+            userManagement.ShowDialog();
+            this.Close();
+        }
+
+        private void btnIM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ticket_overview incidentManagement = new Ticket_overview(currentUser);
+            incidentManagement.ShowDialog();
             this.Close();
         }
     }

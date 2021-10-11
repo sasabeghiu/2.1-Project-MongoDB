@@ -37,6 +37,11 @@ namespace UI
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnIM = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnUM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +49,7 @@ namespace UI
             // 
             this.lblUserView.AutoSize = true;
             this.lblUserView.Font = new System.Drawing.Font("Arial Narrow", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserView.Location = new System.Drawing.Point(41, 71);
+            this.lblUserView.Location = new System.Drawing.Point(41, 76);
             this.lblUserView.Name = "lblUserView";
             this.lblUserView.Size = new System.Drawing.Size(332, 52);
             this.lblUserView.TabIndex = 0;
@@ -56,7 +61,6 @@ namespace UI
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(323, 20);
             this.txtFilter.TabIndex = 1;
-            this.txtFilter.TextChanged += new System.EventHandler(this.TxtFilter_TextChanged);
             // 
             // btnAddUser
             // 
@@ -108,11 +112,66 @@ namespace UI
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Location = new System.Drawing.Point(651, 24);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(29, 13);
+            this.lblLogin.TabIndex = 24;
+            this.lblLogin.Text = "User";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(576, 24);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Logged in as:";
+            // 
+            // btnIM
+            // 
+            this.btnIM.Location = new System.Drawing.Point(304, 57);
+            this.btnIM.Name = "btnIM";
+            this.btnIM.Size = new System.Drawing.Size(141, 23);
+            this.btnIM.TabIndex = 23;
+            this.btnIM.Text = "Incident Management";
+            this.btnIM.UseVisualStyleBackColor = true;
+            this.btnIM.Click += new System.EventHandler(this.BtnIM_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(158, 57);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(141, 23);
+            this.btnDashboard.TabIndex = 22;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            // 
+            // btnUM
+            // 
+            this.btnUM.Location = new System.Drawing.Point(452, 57);
+            this.btnUM.Name = "btnUM";
+            this.btnUM.Size = new System.Drawing.Size(141, 23);
+            this.btnUM.TabIndex = 21;
+            this.btnUM.Text = "User Management";
+            this.btnUM.UseVisualStyleBackColor = true;
+            this.btnUM.Click += new System.EventHandler(this.btnUM_Click);
+            // 
             // User_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnIM);
+            this.Controls.Add(this.btnDashboard);
+            this.Controls.Add(this.btnUM);
             this.Controls.Add(this.dataUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.txtFilter);
@@ -137,5 +196,10 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnIM;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnUM;
     }
 }

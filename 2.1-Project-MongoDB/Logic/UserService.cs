@@ -21,18 +21,15 @@ namespace Logic
             return this.users;
         }
 
-<<<<<<< HEAD
         public User UserLogin(string email, string password)
         {
             User user = MongoDatabase.userCollection.Find(x => x.Email == email & x.Password == password).FirstOrDefault();
             return user;
-=======
-        public void NewUser (User user)
+        }
+
+        public void NewUser(User user)
         {
             MongoDatabase.userCollection.InsertOne(user);
->>>>>>> 5e92e90de8a9506f0f4aec01c0433b58ef9bff4b
         }
     }
-
-    
 }

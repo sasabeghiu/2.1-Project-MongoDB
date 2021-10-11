@@ -14,7 +14,7 @@ namespace UI
 {
     public partial class User_overview : Form
     {
-        UserService userService = new UserService();
+        readonly UserService userService = new UserService();
         public User_overview()
         {
             InitializeComponent();
@@ -34,13 +34,18 @@ namespace UI
             }
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
+        private void BtnAddUser_Click(object sender, EventArgs e)
         {
             this.Hide();
             NewUser form = new NewUser();
             form.ShowDialog();
             this.Close();
             
+        }
+
+        private void TxtFilter_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

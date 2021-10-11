@@ -17,16 +17,14 @@ namespace UI
 {
     public partial class Login : Form
     {
-
-        UserService userService = new UserService();
-
+        readonly UserService userService = new UserService();
 
         public Login()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             try
             {

@@ -77,17 +77,17 @@ namespace UI
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // linklblForgotPassword
             // 
             this.linklblForgotPassword.AutoSize = true;
             this.linklblForgotPassword.Location = new System.Drawing.Point(423, 253);
             this.linklblForgotPassword.Name = "linklblForgotPassword";
-            this.linklblForgotPassword.Size = new System.Drawing.Size(83, 13);
+            this.linklblForgotPassword.Size = new System.Drawing.Size(91, 13);
             this.linklblForgotPassword.TabIndex = 5;
             this.linklblForgotPassword.TabStop = true;
-            this.linklblForgotPassword.Text = "Forgot passord?";
+            this.linklblForgotPassword.Text = "Forgot password?";
             // 
             // Login
             // 
@@ -101,6 +101,7 @@ namespace UI
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NoDesk Application - Login";
             this.ResumeLayout(false);
             this.PerformLayout();

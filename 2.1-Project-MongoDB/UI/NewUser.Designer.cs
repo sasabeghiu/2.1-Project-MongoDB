@@ -64,7 +64,7 @@ namespace UI
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "ADD USER";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnCancel
             // 
@@ -75,7 +75,7 @@ namespace UI
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // checkBoxpassword
             // 
@@ -239,7 +239,7 @@ namespace UI
             this.btnDashboard.TabIndex = 12;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // btnUM
             // 
@@ -250,7 +250,7 @@ namespace UI
             this.btnUM.TabIndex = 11;
             this.btnUM.Text = "User Management";
             this.btnUM.UseVisualStyleBackColor = true;
-            this.btnUM.Click += new System.EventHandler(this.btnUM_Click);
+            this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
             // 
             // label9
             // 

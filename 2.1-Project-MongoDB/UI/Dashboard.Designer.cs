@@ -48,6 +48,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblLoggedIn);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();

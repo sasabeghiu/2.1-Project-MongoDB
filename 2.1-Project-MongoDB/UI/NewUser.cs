@@ -14,20 +14,33 @@ namespace UI
 {
     public partial class NewUser : Form
     {
+<<<<<<< Updated upstream
         private UserService userService;
         private User currentUser;
         public NewUser(User user)
+=======
+        private readonly UserService userService;
+        public NewUser()
+>>>>>>> Stashed changes
         {
             InitializeComponent();
             currentUser = user;
             lblLogin.Text = user.First_name + user.Last_name;
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             //geting info from ui to object
+<<<<<<< Updated upstream
             User newUser = new User();
             newUser.First_name = textBoxfname.Text;
             newUser.Last_name = textBoxlname.Text;
+=======
+            User user = new User
+            {
+                First_name = textBoxfname.Text,
+                Last_name = textBoxlname.Text
+            };
+>>>>>>> Stashed changes
             comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
             newUser.Type = (UserType)comboBoxuser.SelectedItem;
             newUser.Email = textBoxemail.Text;
@@ -45,7 +58,7 @@ namespace UI
             userService.NewUser(newUser);
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             textBoxfname.Text = "";
             textBoxlname.Text = "";
@@ -56,7 +69,7 @@ namespace UI
             checkBoxpassword.Checked = false;
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             this.Hide();
             Dashboard dashboard = new Dashboard(currentUser);
@@ -64,7 +77,7 @@ namespace UI
             this.Close();
         }
 
-        private void btnUM_Click(object sender, EventArgs e)
+        private void BtnUM_Click(object sender, EventArgs e)
         {
             this.Hide();
             User_overview form = new User_overview();

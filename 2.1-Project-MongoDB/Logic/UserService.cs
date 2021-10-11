@@ -31,5 +31,10 @@ namespace Logic
         {
             MongoDatabase.userCollection.InsertOne(user);
         }
+
+        public void FindUser(User user)
+        {
+            //
+        }
     }
 }

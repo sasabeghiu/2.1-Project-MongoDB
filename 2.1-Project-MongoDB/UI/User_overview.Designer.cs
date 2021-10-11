@@ -56,6 +56,7 @@ namespace UI
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(323, 20);
             this.txtFilter.TabIndex = 1;
+            this.txtFilter.TextChanged += new System.EventHandler(this.TxtFilter_TextChanged);
             // 
             // btnAddUser
             // 
@@ -65,7 +66,7 @@ namespace UI
             this.btnAddUser.TabIndex = 2;
             this.btnAddUser.Text = "+ ADD NEW USER";
             this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            this.btnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
             // 
             // dataUser
             // 

@@ -8,30 +8,31 @@ namespace UI
 {
     public partial class User_overview : Form
     {
+        //creating the objects we will need later on
         private readonly User currentUser;
         private readonly UserService userService = new UserService();
-
+        //passing the current user to the form
         public User_overview(User user)
         {
             InitializeComponent();
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name;
         }
-
+        //form loading
         private void User_overview_Load(object sender, EventArgs e)
         {
             Display_All();
         }
-
+        //display all users from database
         private void Display_All()
         {
             List<User> users = userService.getAll();
             foreach (User user in users)
-            {
+            {   
                 dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
             }
         }
-
+        //add new user
         private void BtnAddUser_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -39,7 +40,7 @@ namespace UI
             addUser.ShowDialog();
             this.Close();
         }
-
+        //go to dashboard
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -47,7 +48,7 @@ namespace UI
             dashboard.ShowDialog();
             this.Close();
         }
-
+        //go to ticket view
         private void BtnIM_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -55,13 +56,29 @@ namespace UI
             incidentManagement.ShowDialog();
             this.Close();
         }
-
-        private void btnUM_Click(object sender, EventArgs e)
+        //refresh
+        private void BtnUM_Click(object sender, EventArgs e)
         {
             this.Hide();
             User_overview userManagement = new User_overview(currentUser);
             userManagement.ShowDialog();
             this.Close();
         }
+        //filter by email (has to be the exact email otherwise it won't show)
+        private void TxtFilter_TextChanged(object sender, EventArgs e)
+        {
+            dataUser.Rows.Clear();
+            string search = txtFilter.Text;
+            List<User> users = userService.FilterUsers(x => x.Email == search);
+            foreach (User user in users)
+            {
+                dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
+            }
+            if (txtFilter.Text == "")
+            {
+                Display_All();
+            }
+        }
+        //add number of tickets for each user
     }
 }

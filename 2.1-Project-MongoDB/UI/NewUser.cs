@@ -66,7 +66,7 @@ namespace UI
             this.Close();
         }
 
-        private void btnIM_Click(object sender, EventArgs e)
+        private void BtnIM_Click(object sender, EventArgs e)
         {
             this.Hide();
             Ticket_overview incidentManagement = new Ticket_overview(currentUser);

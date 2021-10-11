@@ -236,7 +236,7 @@ namespace UI
             this.btnIM.TabIndex = 13;
             this.btnIM.Text = "Incident Management";
             this.btnIM.UseVisualStyleBackColor = true;
-            this.btnIM.Click += new System.EventHandler(this.btnIM_Click);
+            this.btnIM.Click += new System.EventHandler(this.BtnIM_Click);
             // 
             // btnDashboard
             // 

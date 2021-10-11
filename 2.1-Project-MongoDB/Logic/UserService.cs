@@ -7,6 +7,7 @@ using Model;
 using DAL;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using System.Linq.Expressions;
 
 namespace Logic
 {
@@ -32,9 +33,10 @@ namespace Logic
             MongoDatabase.userCollection.InsertOne(user);
         }
 
-        public void FindUser(User user)
+        public List<User> FilterUsers(Expression<Func<User, bool>> filter)
         {
-            //
+            List<User> users = MongoDatabase.userCollection.Find(filter).ToList();
+            return users;
         }
     }
 }

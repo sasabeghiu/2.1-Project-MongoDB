@@ -33,15 +33,16 @@ namespace UI
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.dataUser = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblLogin = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnIM = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrtickets = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@ namespace UI
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(323, 20);
             this.txtFilter.TabIndex = 1;
+            this.txtFilter.TextChanged += new System.EventHandler(this.TxtFilter_TextChanged);
             // 
             // btnAddUser
             // 
@@ -79,38 +81,15 @@ namespace UI
             this.dataUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.email,
             this.first_name,
             this.last_name,
-            this.email});
+            this.nrtickets});
             this.dataUser.Location = new System.Drawing.Point(50, 191);
             this.dataUser.Name = "dataUser";
             this.dataUser.ReadOnly = true;
             this.dataUser.Size = new System.Drawing.Size(698, 238);
             this.dataUser.TabIndex = 4;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // first_name
-            // 
-            this.first_name.HeaderText = "first_name";
-            this.first_name.Name = "first_name";
-            this.first_name.ReadOnly = true;
-            // 
-            // last_name
-            // 
-            this.last_name.HeaderText = "last_name";
-            this.last_name.Name = "last_name";
-            this.last_name.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // lblLogin
             // 
@@ -160,7 +139,37 @@ namespace UI
             this.btnUM.TabIndex = 21;
             this.btnUM.Text = "User Management";
             this.btnUM.UseVisualStyleBackColor = true;
-            this.btnUM.Click += new System.EventHandler(this.btnUM_Click);
+            this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // first_name
+            // 
+            this.first_name.HeaderText = "First Name";
+            this.first_name.Name = "first_name";
+            this.first_name.ReadOnly = true;
+            // 
+            // last_name
+            // 
+            this.last_name.HeaderText = "Last Name";
+            this.last_name.Name = "last_name";
+            this.last_name.ReadOnly = true;
+            // 
+            // nrtickets
+            // 
+            this.nrtickets.HeaderText = "# tickets";
+            this.nrtickets.Name = "nrtickets";
+            this.nrtickets.ReadOnly = true;
             // 
             // User_overview
             // 
@@ -192,14 +201,15 @@ namespace UI
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.DataGridView dataUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnIM;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnUM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrtickets;
     }
 }

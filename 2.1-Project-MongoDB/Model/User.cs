@@ -17,7 +17,7 @@ namespace Model
 
         }
 
-        public User(string firstName, string lastName, string email, string password, UserType userType, UserLocation location, int phone, int tickets)
+        public User(string firstName, string lastName, string email, string password, UserType userType, UserLocation location, string phone, int tickets)
         {
             this.First_name = firstName;
             this.Last_name = lastName;
@@ -30,7 +30,7 @@ namespace Model
         }
 
         [BsonRepresentation(BsonType.ObjectId)]
-        public ObjectId id { get; set; }
+        public ObjectId Id { get; set; }
 
         [BsonElement("first_name")]
         public string First_name { get; set; }
@@ -45,17 +45,17 @@ namespace Model
         public string Password { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
-        [BsonRepresentation(BsonType.String)]
+        [BsonElement("user_type")]
         public UserType Type { get; set; }
 
         [BsonElement("phone")]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         [BsonElement("tickets")]
         public int Tickets { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
-        [BsonRepresentation(BsonType.String)]
+        [BsonElement("location")]
         public UserLocation Location { get; set; }
     }
 }

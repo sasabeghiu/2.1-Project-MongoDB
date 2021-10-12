@@ -18,7 +18,7 @@ namespace UI
         {
             InitializeComponent();
             currentUser = user;
-            lblLoggedIn.Text = user.Last_name + ", " + user.First_name;
+            lblLoggedIn.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
         }
 
         private void BtnIM_Click(object sender, EventArgs e)

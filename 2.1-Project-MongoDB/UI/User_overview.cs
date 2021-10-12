@@ -6,6 +6,8 @@ using Model;
 
 namespace UI
 {
+    //add the number of tickets for each user
+    //display id as int
     public partial class User_overview : Form
     {
         //creating the objects we will need later on
@@ -16,20 +18,44 @@ namespace UI
         {
             InitializeComponent();
             currentUser = user;
-            lblLogin.Text = user.Last_name + ", " + user.First_name;
+            lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
         }
         //form loading
         private void User_overview_Load(object sender, EventArgs e)
         {
             Display_All();
+            if (currentUser.Type == UserType.Admin)
+            {
+                btnAddUser.Enabled = true;
+            }
+            else
+            {
+                btnAddUser.Enabled = false;
+            }
         }
         //display all users from database
         private void Display_All()
         {
             List<User> users = userService.getAll();
             foreach (User user in users)
-            {   
-                dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
+            {
+                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
+            }
+        }
+        //filter by email (has to be the exact email otherwise it won't show)
+        private void TxtFilter_TextChanged(object sender, EventArgs e)
+        {
+            dataUser.Rows.Clear();
+            string search = txtFilter.Text;
+            List<User> users = userService.FilterUsers(x => x.Email == search);
+            foreach (User user in users)
+            {
+                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
+            }
+
+            if (txtFilter.Text == "")
+            {
+                Display_All();
             }
         }
         //add new user
@@ -64,22 +90,5 @@ namespace UI
             userManagement.ShowDialog();
             this.Close();
         }
-        //filter by email (has to be the exact email otherwise it won't show)
-        private void TxtFilter_TextChanged(object sender, EventArgs e)
-        {
-            dataUser.Rows.Clear();
-            string search = txtFilter.Text;
-            List<User> users = userService.FilterUsers(x => x.Email == search);
-            foreach (User user in users)
-            {
-                dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
-            }
-
-            if (txtFilter.Text == "")
-            {
-                Display_All();
-            }
-        }
-        //add number of tickets for each user
     }
 }

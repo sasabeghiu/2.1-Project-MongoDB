@@ -17,7 +17,7 @@ namespace Model
 
         }
 
-        public Ticket(string subject, string user, DateTime date, TicketPriority priority, DateTime deadline)
+        public Ticket(string subject, User user, DateTime date, TicketPriority priority, TicketDeadline deadline)
         {
             Subject = subject;
             User = user;
@@ -32,19 +32,24 @@ namespace Model
         [BsonElement("subject")]
         public string Subject { get; set; }
 
+        [JsonConverter(typeof(User))]
         [BsonElement("user")]
-        public string User { get; set; }
+        public User User { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         [BsonElement("date")]
         public DateTime Date { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
-        [BsonRepresentation(BsonType.String)]
+        [BsonElement("priority")]
         public TicketPriority Priority { get; set; }
 
-        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        [JsonConverter(typeof(StringEnumConverter))]
         [BsonElement("deadline")]
-        public DateTime Deadline { get; set; }
+        public TicketDeadline Deadline { get; set; }
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        [BsonElement("status")]
+        public TicketStatus Status { get; set; }
     }
 }

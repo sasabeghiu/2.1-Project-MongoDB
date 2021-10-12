@@ -14,7 +14,7 @@ namespace UI
         {
             InitializeComponent();
             currentUser = user;
-            lblLogin.Text = user.Last_name + ", " + user.First_name;
+            lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace UI
             comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
             newUser.Type = (UserType)comboBoxuser.SelectedItem;
             newUser.Email = textBoxemail.Text;
-            newUser.Phone = int.Parse(textBoxphone.Text);
+            newUser.Phone = textBoxphone.Text;
             comboBoxlocation.DataSource = Enum.GetValues(typeof(UserLocation));
             newUser.Location = (UserLocation)comboBoxlocation.SelectedItem;
 

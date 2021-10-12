@@ -33,17 +33,17 @@ namespace UI
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnCreateTicket = new System.Windows.Forms.Button();
             this.dataTicket = new System.Windows.Forms.DataGridView();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnIM = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnUM = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblLogin = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnIM = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnUM = new System.Windows.Forms.Button();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,8 @@ namespace UI
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(323, 20);
             this.txtFilter.TabIndex = 1;
+            this.txtFilter.Text = "Filter by status keyword";
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // btnCreateTicket
             // 
@@ -93,42 +95,6 @@ namespace UI
             this.dataTicket.ReadOnly = true;
             this.dataTicket.Size = new System.Drawing.Size(698, 238);
             this.dataTicket.TabIndex = 4;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // User
-            // 
-            this.User.HeaderText = "User";
-            this.User.Name = "User";
-            this.User.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Priority
-            // 
-            this.Priority.HeaderText = "Priority";
-            this.Priority.Name = "Priority";
-            this.Priority.ReadOnly = true;
-            // 
-            // Deadline
-            // 
-            this.Deadline.HeaderText = "Deadline";
-            this.Deadline.Name = "Deadline";
-            this.Deadline.ReadOnly = true;
             // 
             // lblLogin
             // 
@@ -180,11 +146,51 @@ namespace UI
             this.btnUM.UseVisualStyleBackColor = true;
             this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // User
+            // 
+            this.User.HeaderText = "User";
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 80;
+            // 
+            // Priority
+            // 
+            this.Priority.HeaderText = "Priority";
+            this.Priority.Name = "Priority";
+            this.Priority.ReadOnly = true;
+            this.Priority.Width = 80;
+            // 
+            // Deadline
+            // 
+            this.Deadline.HeaderText = "Deadline";
+            this.Deadline.Name = "Deadline";
+            this.Deadline.ReadOnly = true;
+            this.Deadline.Width = 80;
+            // 
             // Status
             // 
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Width = 80;
             // 
             // Ticket_overview
             // 
@@ -216,17 +222,17 @@ namespace UI
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnCreateTicket;
         private System.Windows.Forms.DataGridView dataTicket;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnIM;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnUM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
-        private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnIM;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnUM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

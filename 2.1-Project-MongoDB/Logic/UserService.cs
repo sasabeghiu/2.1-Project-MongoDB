@@ -21,6 +21,12 @@ namespace Logic
             this.users = MongoDatabase.userCollection.Find(new BsonDocument()).ToList();
             return this.users;
         }
+        //filter by email
+        public List<User> FilterUsers(Expression<Func<User, bool>> filter)
+        {
+            List<User> users = MongoDatabase.userCollection.Find(filter).ToList();
+            return users;
+        }
 
         public User UserLogin(string email, string password)
         {
@@ -31,12 +37,6 @@ namespace Logic
         public void NewUser(User user)
         {
             MongoDatabase.userCollection.InsertOne(user);
-        }
-        //filter by email
-        public List<User> FilterUsers(Expression<Func<User, bool>> filter)
-        {
-            List<User> users = MongoDatabase.userCollection.Find(filter).ToList();
-            return users;
         }
     }
 }

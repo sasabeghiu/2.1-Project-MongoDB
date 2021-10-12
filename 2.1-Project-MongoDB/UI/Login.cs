@@ -47,9 +47,7 @@ namespace UI
                     this.Hide();
                     dashboard.Closed += (s, args) => this.Close();
                 }
-
             }
-
             catch (Exception ex)
             {
                 ErrorProcess(ex, "Something went wrong while loging in");

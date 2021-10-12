@@ -8,6 +8,8 @@ using DAL;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Linq.Expressions;
+using System.Net;
+using System.Net.Mail;
 
 namespace Logic
 {
@@ -38,5 +40,36 @@ namespace Logic
         {
             MongoDatabase.userCollection.InsertOne(user);
         }
+
+        /*
+        public void SendEmail(User user)
+        {
+            MailMessage message;
+            SmtpClient smtp;
+
+            message = new MailMessage();
+
+            message.Subject = "Service Desk Password";
+
+            message.From = new MailAddress(user.Email);
+
+            message.Body = $"Dear {user.First_name} {user.Last_name}, " +
+                $"Here is your password: {user.Password}";
+
+            // set smtp details
+
+            smtp = new SmtpClient("smtp.gmail.com");
+
+            smtp.Port = 25;
+
+            smtp.EnableSsl = true;
+
+            smtp.Credentials = new NetworkCredential("deepak.sharma009@gmail.com", "********");
+
+            smtp.SendAsync(message, message.Subject);
+
+            smtp.SendCompleted += new SendCompletedEventHandler(NewUser.smtp_SendCompleted);
+        }
+        */
     }
 }

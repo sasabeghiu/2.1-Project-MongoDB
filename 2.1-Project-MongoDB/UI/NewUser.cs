@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using Logic;
 using Model;
@@ -19,7 +20,7 @@ namespace UI
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //geting info from ui to object
+            //geting info from UI to object
             User newUser = new User();
             newUser.First_name = textBoxfname.Text;
             newUser.Last_name = textBoxlname.Text;
@@ -35,7 +36,7 @@ namespace UI
                 //
             }
 
-            //adding user to database
+            //passing user to be added to database
             userService.NewUser(newUser);
         }
 

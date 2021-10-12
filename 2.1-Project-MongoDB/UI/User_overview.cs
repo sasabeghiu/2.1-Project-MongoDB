@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Logic;
 using Model;
+using MongoDB.Bson;
 
 namespace UI
 {
@@ -39,7 +41,8 @@ namespace UI
             List<User> users = userService.getAll();
             foreach (User user in users)
             {
-                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
+                Int32 a = Convert.ToInt32(ObjectId.GenerateNewId());
+                dataUser.Rows.Add(a, user.Email, user.First_name, user.Last_name);
             }
         }
         //filter by email (has to be the exact email otherwise it won't show)

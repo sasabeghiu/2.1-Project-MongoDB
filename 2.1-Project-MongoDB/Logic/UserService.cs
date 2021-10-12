@@ -36,7 +36,7 @@ namespace Logic
             return user;
         }
         //add new user
-        public void NewUser(User user)
+        public void AddNewUser(User user)
         {
             MongoDatabase.userCollection.InsertOne(user);
         }

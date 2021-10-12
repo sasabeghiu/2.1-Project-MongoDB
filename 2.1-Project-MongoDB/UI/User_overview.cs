@@ -41,8 +41,7 @@ namespace UI
             List<User> users = userService.getAll();
             foreach (User user in users)
             {
-                Int32 a = Convert.ToInt32(ObjectId.GenerateNewId());
-                dataUser.Rows.Add(a, user.Email, user.First_name, user.Last_name);
+                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
             }
         }
         //filter by email (has to be the exact email otherwise it won't show)

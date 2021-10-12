@@ -1,117 +1,39 @@
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy32.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy64.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\libzstd.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\mongocrypt.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.pdb
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Libmongocrypt.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\SharpCompress.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.pdb
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.xml
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.dll
-D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.pdb
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy32.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy64.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\libzstd.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\mongocrypt.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.pdb
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Libmongocrypt.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\SharpCompress.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.pdb
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.xml
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.dll
-D:\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.pdb
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy32.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy64.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\libzstd.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\mongocrypt.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.pdb
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Libmongocrypt.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\SharpCompress.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.pdb
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.xml
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.dll
-C:\Users\adir7\Source\Repos\sasabeghiu\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.pdb
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy32.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\snappy64.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\libzstd.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\mongocrypt.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DAL.pdb
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\SharpCompress.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Model.pdb
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\DnsClient.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Bson.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\MongoDB.Driver.Core.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Buffers.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.AccessControl.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Permissions.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.Security.Principal.Windows.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\bin\Debug\System.ValueTuple.xml
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.dll
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\DAL\obj\Debug\DAL.pdb

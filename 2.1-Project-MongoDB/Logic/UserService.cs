@@ -15,7 +15,7 @@ namespace Logic
     public class UserService
     {
         private List<User> users;
-
+        //get all results from database
         public List<User> getAll()
         {
             this.users = MongoDatabase.userCollection.Find(new BsonDocument()).ToList();
@@ -27,12 +27,12 @@ namespace Logic
             User user = MongoDatabase.userCollection.Find(x => x.Email == email & x.Password == password).FirstOrDefault();
             return user;
         }
-
+        //add new user
         public void NewUser(User user)
         {
             MongoDatabase.userCollection.InsertOne(user);
         }
-
+        //filter by email
         public List<User> FilterUsers(Expression<Func<User, bool>> filter)
         {
             List<User> users = MongoDatabase.userCollection.Find(filter).ToList();

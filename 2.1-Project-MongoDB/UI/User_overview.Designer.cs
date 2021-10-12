@@ -62,6 +62,7 @@ namespace UI
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(323, 20);
             this.txtFilter.TabIndex = 1;
+            this.txtFilter.Text = "Filter by email";
             this.txtFilter.TextChanged += new System.EventHandler(this.TxtFilter_TextChanged);
             // 
             // btnAddUser
@@ -146,12 +147,14 @@ namespace UI
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Width = 180;
             // 
             // email
             // 
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            this.email.Width = 150;
             // 
             // first_name
             // 
@@ -170,6 +173,7 @@ namespace UI
             this.nrtickets.HeaderText = "# tickets";
             this.nrtickets.Name = "nrtickets";
             this.nrtickets.ReadOnly = true;
+            this.nrtickets.Width = 105;
             // 
             // User_overview
             // 

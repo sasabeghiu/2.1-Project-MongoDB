@@ -44,6 +44,7 @@ namespace UI
             this.btnIM = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace UI
             this.btnCreateTicket.TabIndex = 2;
             this.btnCreateTicket.Text = "Create Incident";
             this.btnCreateTicket.UseVisualStyleBackColor = true;
-            this.btnCreateTicket.Click += new System.EventHandler(this.btnCreateTicket_Click);
+            this.btnCreateTicket.Click += new System.EventHandler(this.BtnCreateTicket_Click);
             // 
             // dataTicket
             // 
@@ -85,7 +86,8 @@ namespace UI
             this.User,
             this.Date,
             this.Priority,
-            this.Deadline});
+            this.Deadline,
+            this.Status});
             this.dataTicket.Location = new System.Drawing.Point(50, 191);
             this.dataTicket.Name = "dataTicket";
             this.dataTicket.ReadOnly = true;
@@ -156,7 +158,7 @@ namespace UI
             this.btnIM.TabIndex = 23;
             this.btnIM.Text = "Incident Management";
             this.btnIM.UseVisualStyleBackColor = true;
-            this.btnIM.Click += new System.EventHandler(this.btnIM_Click);
+            this.btnIM.Click += new System.EventHandler(this.BtnIM_Click);
             // 
             // btnDashboard
             // 
@@ -166,7 +168,7 @@ namespace UI
             this.btnDashboard.TabIndex = 22;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // btnUM
             // 
@@ -176,7 +178,13 @@ namespace UI
             this.btnUM.TabIndex = 21;
             this.btnUM.Text = "User Management";
             this.btnUM.UseVisualStyleBackColor = true;
-            this.btnUM.Click += new System.EventHandler(this.btnUM_Click);
+            this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // Ticket_overview
             // 
@@ -219,5 +227,6 @@ namespace UI
         private System.Windows.Forms.Button btnIM;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnUM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

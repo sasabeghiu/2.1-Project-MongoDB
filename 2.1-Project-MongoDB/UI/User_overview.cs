@@ -74,6 +74,7 @@ namespace UI
             {
                 dataUser.Rows.Add(user.id, user.Email, user.First_name, user.Last_name);
             }
+
             if (txtFilter.Text == "")
             {
                 Display_All();

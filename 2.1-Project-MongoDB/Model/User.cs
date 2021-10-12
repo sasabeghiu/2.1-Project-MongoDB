@@ -2,6 +2,7 @@
 using System.Web.Helpers;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -30,8 +31,6 @@ namespace Model
 
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId id { get; set; }
-        /*[BsonElement("id")]
-        public int id { get; set; }*/
 
         [BsonElement("first_name")]
         public string First_name { get; set; }

@@ -27,5 +27,10 @@ namespace Logic
             List<Ticket> tickets = MongoDatabase.ticketCollection.Find(filter).ToList();
             return tickets;
         }
+        //Adding ticket
+        public void AddTicket(Ticket ticket)
+        {
+            MongoDatabase.ticketCollection.InsertOne(ticket);
+        }
     }
 }

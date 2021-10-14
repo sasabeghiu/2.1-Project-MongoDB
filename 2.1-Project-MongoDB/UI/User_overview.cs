@@ -8,7 +8,6 @@ using MongoDB.Bson;
 
 namespace UI
 {
-    //add the number of tickets for each user
     //display id as int
     public partial class User_overview : Form
     {
@@ -41,7 +40,7 @@ namespace UI
             List<User> users = userService.getAll();
             foreach (User user in users)
             {
-                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
+                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name, user.Tickets);
             }
         }
         //filter by email (has to be the exact email otherwise it won't show)
@@ -52,7 +51,7 @@ namespace UI
             List<User> users = userService.FilterUsers(x => x.Email == search);
             foreach (User user in users)
             {
-                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name);
+                dataUser.Rows.Add(user.Id, user.Email, user.First_name, user.Last_name, user.Tickets);
             }
 
             if (txtFilter.Text == "")

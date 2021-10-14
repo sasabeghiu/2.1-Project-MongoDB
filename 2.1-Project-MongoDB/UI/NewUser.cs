@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using Logic;
 using Model;
@@ -19,24 +20,34 @@ namespace UI
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //geting info from ui to object
+            //geting info from UI to object
             User newUser = new User();
             newUser.First_name = textBoxfname.Text;
             newUser.Last_name = textBoxlname.Text;
-            comboBoxuser.DataSource = Enum.GetValues(typeof(UserType));
-            newUser.Type = (UserType)comboBoxuser.SelectedItem;
+            newUser.Type = (UserType)Enum.Parse(typeof(UserType), comboBoxuser.SelectedItem.ToString());
             newUser.Email = textBoxemail.Text;
             newUser.Phone = textBoxphone.Text;
-            comboBoxlocation.DataSource = Enum.GetValues(typeof(UserLocation));
-            newUser.Location = (UserLocation)comboBoxlocation.SelectedItem;
+            newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), comboBoxlocation.SelectedItem.ToString());
 
             if (checkBoxpassword.Checked)
             {
                 //
             }
 
-            //adding user to database
-            userService.NewUser(newUser);
+            //passing user to be added to database
+            try
+            {
+                userService.AddNewUser(newUser);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error while creating user: {ex}");
+            }
+            finally
+            {
+                MessageBox.Show($"User created successfully!");
+                btnCancel.PerformClick();
+            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

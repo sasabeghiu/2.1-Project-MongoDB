@@ -60,12 +60,10 @@ namespace UI
         //create new ticket
         private void BtnCreateTicket_Click(object sender, EventArgs e)
         {
-            /*
             this.Hide();
-            CreateTicket createTicket = new CreateTicket(currentUser);
+            NewTicket createTicket = new NewTicket(currentUser);
             createTicket.ShowDialog();
             this.Close();
-            */
         }
         //go to dashboard
         private void BtnDashboard_Click(object sender, EventArgs e)

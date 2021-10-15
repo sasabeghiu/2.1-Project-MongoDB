@@ -13,6 +13,7 @@ namespace UI
         //creating the objects we will need later on
         private readonly User currentUser;
         private readonly TicketService ticketService = new TicketService();
+        private readonly UserService userService = new UserService();
         //passing the current user to the form
         public Ticket_overview(User user)
         {
@@ -37,9 +38,14 @@ namespace UI
         private void Display_All()
         {
             List<Ticket> tickets = ticketService.getAll();
+            List<User> users = userService.getAll();
             foreach (Ticket ticket in tickets)
             {
-                dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
+                for (int i = 0;i<users.Count;i++)
+                {
+                    dataTicket.Rows.Add(ticket.id, ticket.Subject, users[i].First_name, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
+                }
+                
             }
         }
         //filter open tickets

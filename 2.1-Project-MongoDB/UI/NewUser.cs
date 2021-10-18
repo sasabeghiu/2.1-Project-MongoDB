@@ -20,34 +20,36 @@ namespace UI
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //geting info from UI to object
-            User newUser = new User();
-            newUser.First_name = textBoxfname.Text;
-            newUser.Last_name = textBoxlname.Text;
-            newUser.Type = (UserType)Enum.Parse(typeof(UserType), comboBoxuser.SelectedItem.ToString());
-            newUser.Email = textBoxemail.Text;
-            newUser.Phone = textBoxphone.Text;
-            newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), comboBoxlocation.SelectedItem.ToString());
+            
 
-            if (checkBoxpassword.Checked)
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                //
+                try
+                {
+                    //geting info from UI to object
+                    User newUser = new User();
+                    newUser.First_name = textBoxfname.Text;
+                    newUser.Last_name = textBoxlname.Text;
+                    newUser.Type = (UserType)Enum.Parse(typeof(UserType), comboBoxuser.SelectedItem.ToString());
+                    newUser.Email = textBoxemail.Text;
+                    newUser.Phone = textBoxphone.Text;
+                    newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), comboBoxlocation.SelectedItem.ToString());
+
+                    userService.AddNewUser(newUser); //passing user to be added to database
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error while creating user: {ex}");
+                }
+                finally
+                {
+                    MessageBox.Show($"User created successfully!");
+                    btnCancel.PerformClick();
+                }
             }
 
-            //passing user to be added to database
-            try
-            {
-                userService.AddNewUser(newUser);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show($"Error while creating user: {ex}");
-            }
-            finally
-            {
-                MessageBox.Show($"User created successfully!");
-                btnCancel.PerformClick();
-            }
+            
+            
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -83,6 +85,95 @@ namespace UI
             Ticket_overview incidentManagement = new Ticket_overview(currentUser);
             incidentManagement.ShowDialog();
             this.Close();
+        }
+
+        private void textBoxfname_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxfname.Text))
+            {
+                e.Cancel = true;
+                textBoxfname.Focus();
+                errorProviderText.SetError(textBoxfname, "Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderText.SetError(textBoxfname, "");
+            }
+        }
+
+        private void textBoxlname_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxlname.Text))
+            {
+                e.Cancel = true;
+                textBoxlname.Focus();
+                errorProviderText.SetError(textBoxlname, "Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderText.SetError(textBoxlname, "");
+            }
+        }
+
+        private void textBoxemail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxemail.Text))
+            {
+                e.Cancel = true;
+                textBoxemail.Focus();
+                errorProviderText.SetError(textBoxemail, "Email should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderText.SetError(textBoxemail, "");
+            }
+        }
+
+        private void textBoxphone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxphone.Text))
+            {
+                e.Cancel = true;
+                textBoxphone.Focus();
+                errorProviderText.SetError(textBoxphone, "Phone should not be left blank!");
+            }
+            else
+            {
+                try
+                {
+                    if (int.Parse(textBoxphone.Text) >= 0)
+                    {
+                        e.Cancel = false;
+                        errorProviderText.SetError(textBoxphone, "");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    e.Cancel = true;
+                    textBoxphone.Focus();
+                    errorProviderText.SetError(textBoxphone, "Phone should only contain numbers!");
+                    textBoxphone.Text = "";
+                }
+            }
+        }
+
+        private void comboBoxuser_Leave(object sender, EventArgs e)
+        {
+            if (!comboBoxuser.Items.Contains(comboBoxuser.Text))
+            {
+                MessageBox.Show("Please select a type of user");
+            }
+        }
+
+        private void comboBoxlocation_Leave(object sender, EventArgs e)
+        {
+            if (!comboBoxlocation.Items.Contains(comboBoxlocation.Text))
+            {
+                MessageBox.Show("Please select a location/branch");
+            }
         }
     }
 }

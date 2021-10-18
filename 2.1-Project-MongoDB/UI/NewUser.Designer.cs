@@ -29,6 +29,8 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUser));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.checkBoxpassword = new System.Windows.Forms.CheckBox();
@@ -51,6 +53,8 @@ namespace UI
             this.btnUM = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.errorProviderText = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderText)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -101,6 +105,7 @@ namespace UI
             this.comboBoxlocation.Name = "comboBoxlocation";
             this.comboBoxlocation.Size = new System.Drawing.Size(190, 21);
             this.comboBoxlocation.TabIndex = 27;
+            this.comboBoxlocation.Leave += new System.EventHandler(this.comboBoxlocation_Leave);
             // 
             // comboBoxuser
             // 
@@ -113,6 +118,7 @@ namespace UI
             this.comboBoxuser.Name = "comboBoxuser";
             this.comboBoxuser.Size = new System.Drawing.Size(190, 21);
             this.comboBoxuser.TabIndex = 26;
+            this.comboBoxuser.Leave += new System.EventHandler(this.comboBoxuser_Leave);
             // 
             // textBoxphone
             // 
@@ -121,6 +127,7 @@ namespace UI
             this.textBoxphone.Name = "textBoxphone";
             this.textBoxphone.Size = new System.Drawing.Size(190, 20);
             this.textBoxphone.TabIndex = 24;
+            this.textBoxphone.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxphone_Validating);
             // 
             // textBoxemail
             // 
@@ -129,6 +136,7 @@ namespace UI
             this.textBoxemail.Name = "textBoxemail";
             this.textBoxemail.Size = new System.Drawing.Size(190, 20);
             this.textBoxemail.TabIndex = 23;
+            this.textBoxemail.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxemail_Validating);
             // 
             // textBoxlname
             // 
@@ -137,6 +145,7 @@ namespace UI
             this.textBoxlname.Name = "textBoxlname";
             this.textBoxlname.Size = new System.Drawing.Size(190, 20);
             this.textBoxlname.TabIndex = 22;
+            this.textBoxlname.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxlname_Validating);
             // 
             // textBoxfname
             // 
@@ -145,6 +154,7 @@ namespace UI
             this.textBoxfname.Name = "textBoxfname";
             this.textBoxfname.Size = new System.Drawing.Size(190, 20);
             this.textBoxfname.TabIndex = 25;
+            this.textBoxfname.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxfname_Validating);
             // 
             // label8
             // 
@@ -278,6 +288,13 @@ namespace UI
             this.lblLogin.TabIndex = 20;
             this.lblLogin.Text = "User";
             // 
+            // errorProviderText
+            // 
+            this.errorProviderText.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderText.ContainerControl = this;
+            this.errorProviderText.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderText.Icon")));
+            this.errorProviderText.RightToLeftChanged += new System.EventHandler(this.BtnAdd_Click);
+            // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +326,7 @@ namespace UI
             this.Name = "NewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewUser";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderText)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +356,6 @@ namespace UI
         private System.Windows.Forms.Button btnUM;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.ErrorProvider errorProviderText;
     }
 }

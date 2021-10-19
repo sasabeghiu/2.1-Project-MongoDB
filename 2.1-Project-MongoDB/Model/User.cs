@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Helpers;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Bson.Serialization.IdGenerators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -15,7 +16,7 @@ namespace Model
     {
         public User()
         {
-
+            //
         }
 
         public User(string firstName, string lastName, string email, string password, UserType userType, UserLocation location, string phone, int tickets)
@@ -46,6 +47,7 @@ namespace Model
         public string Password { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
+        [BsonRepresentation(BsonType.String)] //converts to string representation
         [BsonElement("user_type")]
         public UserType Type { get; set; }
 
@@ -56,6 +58,7 @@ namespace Model
         public int Tickets { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
+        [BsonRepresentation(BsonType.String)]
         [BsonElement("location")]
         public UserLocation Location { get; set; }
     }

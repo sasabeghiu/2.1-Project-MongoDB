@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 using Logic;
@@ -16,40 +17,38 @@ namespace UI
             InitializeComponent();
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
+            //LoadData();
+        }
+
+        private void LoadData()
+        {
+            
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            
-
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            try
             {
-                try
+                if (ValidateChildren(ValidationConstraints.Enabled))
                 {
                     //geting info from UI to object
                     User newUser = new User();
                     newUser.First_name = textBoxfname.Text;
                     newUser.Last_name = textBoxlname.Text;
-                    newUser.Type = (UserType)Enum.Parse(typeof(UserType), comboBoxuser.SelectedItem.ToString());
+                    newUser.Type = (UserType)Enum.Parse(typeof(UserType), (string)comboBoxuser.SelectedItem);
                     newUser.Email = textBoxemail.Text;
                     newUser.Phone = textBoxphone.Text;
-                    newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), comboBoxlocation.SelectedItem.ToString());
+                    newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), (string)comboBoxlocation.SelectedItem);
 
                     userService.AddNewUser(newUser); //passing user to be added to database
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error while creating user: {ex}");
-                }
-                finally
-                {
-                    MessageBox.Show($"User created successfully!");
-                    btnCancel.PerformClick();
-                }
+                MessageBox.Show($"User created successfully!");
+                btnCancel.PerformClick();
             }
-
-            
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while creating user: {ex}");
+            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

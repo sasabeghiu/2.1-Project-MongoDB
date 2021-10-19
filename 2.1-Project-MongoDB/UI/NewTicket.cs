@@ -21,7 +21,5 @@ namespace UI
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
         }
-
-       
     }
 }

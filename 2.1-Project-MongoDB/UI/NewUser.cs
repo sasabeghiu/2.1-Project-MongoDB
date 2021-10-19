@@ -17,12 +17,6 @@ namespace UI
             InitializeComponent();
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
-            //LoadData();
-        }
-
-        private void LoadData()
-        {
-            
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)

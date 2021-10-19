@@ -16,13 +16,7 @@ namespace Model
     {
         public User()
         {
-            // Set up MongoDB conventions
-            var pack = new ConventionPack
-            {
-                new EnumRepresentationConvention(BsonType.String)
-            };
-
-            ConventionRegistry.Register("EnumStringConvention", pack, t => true);
+            //
         }
 
         public User(string firstName, string lastName, string email, string password, UserType userType, UserLocation location, string phone, int tickets)

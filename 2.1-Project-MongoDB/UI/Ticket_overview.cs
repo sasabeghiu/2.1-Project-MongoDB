@@ -41,19 +41,19 @@ namespace UI
             List<User> users = userService.getAll();
             foreach (Ticket ticket in tickets)
             {
-                for (int i = 0;i<users.Count;i++)
+                foreach(User user in users)
                 {
-                    dataTicket.Rows.Add(ticket.id, ticket.Subject, users[i].First_name, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
+                    ticket.assignUser(user);
                 }
-                
+                dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User.First_name, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
             }
         }
-        //filter open tickets
+        //filter tickets by subject
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
-            /*dataTicket.Rows.Clear();
+            dataTicket.Rows.Clear();
             string search = txtFilter.Text;
-            List<Ticket> tickets = ticketService.FilterTickets(x => x.Status == TicketStatus.Open);
+            List<Ticket> tickets = ticketService.FilterTickets(x=>x.Subject==search);
             foreach (Ticket ticket in tickets)
             { 
                 dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
@@ -61,7 +61,7 @@ namespace UI
             if (txtFilter.Text == "")
             {
                 Display_All();
-            }*/
+            }
         }
         //create new ticket
         private void BtnCreateTicket_Click(object sender, EventArgs e)

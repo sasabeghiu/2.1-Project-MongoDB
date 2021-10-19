@@ -21,7 +21,7 @@ namespace Logic
             this.tickets = MongoDatabase.ticketCollection.Find(new BsonDocument()).ToList();
             return this.tickets;
         }
-        //filter by email
+        //filter by subject
         public List<Ticket> FilterTickets(Expression<Func<Ticket, bool>> filter)
         {
             List<Ticket> tickets = MongoDatabase.ticketCollection.Find(filter).ToList();

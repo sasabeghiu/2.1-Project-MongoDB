@@ -36,6 +36,11 @@ namespace Model
             Description = desciption;
         }
 
+        public void assignUser(User user)
+        {
+            this.User = user;
+        }
+
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId id { get; set; }
 

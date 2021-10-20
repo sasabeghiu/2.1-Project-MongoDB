@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Web.Helpers;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.IdGenerators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Model
 {
-    //HERE WILL BE DEFINED ALL CTORS AND FIELDS (GETTERS AND SETTERS)
     [BsonIgnoreExtraElements]
     public class Ticket
     {
@@ -17,16 +14,7 @@ namespace Model
 
         }
 
-        public Ticket(string subject, User user, DateTime date, TicketPriority priority, TicketDeadline deadline)
-        {
-            Subject = subject;
-            User = user;
-            Date = date;
-            Priority = priority;
-            Deadline = deadline;
-        }
-
-        public Ticket(string subject, User user, DateTime date, TicketPriority priority, TicketDeadline deadline, string desciption)
+        public Ticket(string subject, string user, DateTime date, TicketPriority priority, TicketDeadline deadline, string desciption)
         {
             Subject = subject;
             User = user;
@@ -36,20 +24,14 @@ namespace Model
             Description = desciption;
         }
 
-        public void assignUser(User user)
-        {
-            this.User = user;
-        }
-
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId id { get; set; }
 
         [BsonElement("subject")]
         public string Subject { get; set; }
 
-        [JsonConverter(typeof(User))]
-        [BsonElement("user")]
-        public User User { get; set; }
+        [BsonElement("userId")]
+        public string User { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         [BsonElement("date")]
@@ -70,5 +52,8 @@ namespace Model
         [BsonElement("description")]
         public string Description { get; set; }
 
+        /*[JsonConverter(typeof(StringEnumConverter))]
+        [BsonElement("type")]
+        public TicketType Type { get; set; }*/
     }
 }

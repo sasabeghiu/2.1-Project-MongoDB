@@ -6,14 +6,12 @@ using Model;
 
 namespace UI
 {
-    //add name of user for each ticket
-    //filter by status in another class
+    //left to do: display object id as integer id
     public partial class Ticket_overview : Form
     {
         //creating the objects we will need later on
         private readonly User currentUser;
         private readonly TicketService ticketService = new TicketService();
-        private readonly UserService userService = new UserService();
         //passing the current user to the form
         public Ticket_overview(User user)
         {
@@ -21,7 +19,7 @@ namespace UI
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
         }
-        //form loading
+        //form loading depending on user type
         private void Ticket_overview_Load(object sender, EventArgs e)
         {
             Display_All();
@@ -38,14 +36,27 @@ namespace UI
         private void Display_All()
         {
             List<Ticket> tickets = ticketService.getAll();
-            List<User> users = userService.getAll();
             foreach (Ticket ticket in tickets)
             {
-                foreach(User user in users)
+                //since we cant make a enum starting with a int, i did a simple if statement
+                string deadline = "";
+                if (ticket.Deadline == TicketDeadline.Days7)
                 {
-                    ticket.assignUser(user);
+                    deadline = "7 Days";
                 }
-                dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User.First_name, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
+                else if (ticket.Deadline == TicketDeadline.Days14)
+                {
+                    deadline = "14 Days";
+                }
+                else if (ticket.Deadline == TicketDeadline.Days28)
+                {
+                    deadline = "28 Days";
+                }
+                else
+                {
+                    deadline = "6 months";
+                }
+                dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, deadline, ticket.Status);
             }
         }
         //filter tickets by subject
@@ -53,9 +64,9 @@ namespace UI
         {
             dataTicket.Rows.Clear();
             string search = txtFilter.Text;
-            List<Ticket> tickets = ticketService.FilterTickets(x=>x.Subject==search);
+            List<Ticket> tickets = ticketService.FilterTickets(x => x.Subject == search);
             foreach (Ticket ticket in tickets)
-            { 
+            {
                 dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
             }
             if (txtFilter.Text == "")

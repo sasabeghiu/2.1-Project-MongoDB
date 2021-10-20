@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using Model;
 
 namespace DAL
 {
-    //THIS IS EVERYTHING FOR DAL LAYER, DON'T ADD ANY CLASSES OR CHANGES FOR NOW
     public static class MongoDatabase
     {
         public static MongoClient client;

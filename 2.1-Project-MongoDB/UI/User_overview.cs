@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Windows.Forms;
 using Logic;
 using Model;
-using MongoDB.Bson;
 
 namespace UI
 {
-    //display id as int
+    //left to do: display object id as integer id
     public partial class User_overview : Form
     {
         //creating the objects we will need later on

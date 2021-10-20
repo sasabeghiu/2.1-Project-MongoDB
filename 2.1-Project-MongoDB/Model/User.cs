@@ -1,22 +1,16 @@
-﻿using System;
-using System.Linq;
-using System.Web.Helpers;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.Conventions;
-using MongoDB.Bson.Serialization.IdGenerators;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Model
 {
-    //HERE WILL BE DEFINED ALL CTORS AND FIELDS (GETTERS AND SETTERS) NOT DONE YET
     [BsonIgnoreExtraElements]
     public class User
     {
         public User()
         {
-            //
+
         }
 
         public User(string firstName, string lastName, string email, string password, UserType userType, UserLocation location, string phone, int tickets)

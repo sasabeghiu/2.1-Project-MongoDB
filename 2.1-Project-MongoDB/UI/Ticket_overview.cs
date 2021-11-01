@@ -106,5 +106,19 @@ namespace UI
             incidentManagement.ShowDialog();
             this.Close();
         }
+
+        private void transferBtn_Click(object sender, EventArgs e)
+        {
+            List<Ticket> tickets = ticketService.getAll();
+            foreach(Ticket ticket in tickets)
+            {
+                if(ticket == (Ticket)dataTicket.CurrentRow.DataBoundItem)
+                {
+                    TransferTicket transferForm = new TransferTicket(ticket);
+                    transferForm.ShowDialog(this);
+                }
+            }
+            MessageBox.Show("Error whille selecting the ticket, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

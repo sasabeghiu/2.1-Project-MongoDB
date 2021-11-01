@@ -45,6 +45,7 @@ namespace UI
             this.btnIM = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
+            this.transferBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,26 +53,29 @@ namespace UI
             // 
             this.lblTicketView.AutoSize = true;
             this.lblTicketView.Font = new System.Drawing.Font("Arial Narrow", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTicketView.Location = new System.Drawing.Point(41, 76);
+            this.lblTicketView.Location = new System.Drawing.Point(55, 94);
+            this.lblTicketView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTicketView.Name = "lblTicketView";
-            this.lblTicketView.Size = new System.Drawing.Size(305, 52);
+            this.lblTicketView.Size = new System.Drawing.Size(379, 64);
             this.lblTicketView.TabIndex = 0;
             this.lblTicketView.Text = "Overview tickets";
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(50, 136);
+            this.txtFilter.Location = new System.Drawing.Point(67, 167);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(323, 20);
+            this.txtFilter.Size = new System.Drawing.Size(429, 22);
             this.txtFilter.TabIndex = 1;
             this.txtFilter.Text = "Filter by incident subject";
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // btnCreateTicket
             // 
-            this.btnCreateTicket.Location = new System.Drawing.Point(622, 121);
+            this.btnCreateTicket.Location = new System.Drawing.Point(829, 149);
+            this.btnCreateTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateTicket.Name = "btnCreateTicket";
-            this.btnCreateTicket.Size = new System.Drawing.Size(126, 35);
+            this.btnCreateTicket.Size = new System.Drawing.Size(168, 43);
             this.btnCreateTicket.TabIndex = 2;
             this.btnCreateTicket.Text = "Create Incident";
             this.btnCreateTicket.UseVisualStyleBackColor = true;
@@ -90,33 +94,43 @@ namespace UI
             this.Priority,
             this.Deadline,
             this.Status});
-            this.dataTicket.Location = new System.Drawing.Point(50, 191);
+            this.dataTicket.Location = new System.Drawing.Point(67, 235);
+            this.dataTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataTicket.Name = "dataTicket";
             this.dataTicket.ReadOnly = true;
-            this.dataTicket.Size = new System.Drawing.Size(698, 238);
+            this.dataTicket.RowHeadersWidth = 51;
+            this.dataTicket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataTicket.Size = new System.Drawing.Size(931, 293);
             this.dataTicket.TabIndex = 4;
             // 
             // Id
             // 
             this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Width = 125;
             // 
             // Subject
             // 
             this.Subject.HeaderText = "Subject";
+            this.Subject.MinimumWidth = 6;
             this.Subject.Name = "Subject";
             this.Subject.ReadOnly = true;
+            this.Subject.Width = 125;
             // 
             // User
             // 
             this.User.HeaderText = "User";
+            this.User.MinimumWidth = 6;
             this.User.Name = "User";
             this.User.ReadOnly = true;
+            this.User.Width = 125;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             this.Date.Width = 80;
@@ -124,6 +138,7 @@ namespace UI
             // Priority
             // 
             this.Priority.HeaderText = "Priority";
+            this.Priority.MinimumWidth = 6;
             this.Priority.Name = "Priority";
             this.Priority.ReadOnly = true;
             this.Priority.Width = 80;
@@ -131,6 +146,7 @@ namespace UI
             // Deadline
             // 
             this.Deadline.HeaderText = "Deadline";
+            this.Deadline.MinimumWidth = 6;
             this.Deadline.Name = "Deadline";
             this.Deadline.ReadOnly = true;
             this.Deadline.Width = 80;
@@ -138,6 +154,7 @@ namespace UI
             // Status
             // 
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             this.Status.Width = 80;
@@ -145,28 +162,27 @@ namespace UI
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(651, 24);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Location = new System.Drawing.Point(868, 30);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(29, 13);
+            this.lblLogin.Size = new System.Drawing.Size(38, 17);
             this.lblLogin.TabIndex = 24;
             this.lblLogin.Text = "User";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(576, 24);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(768, 30);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.Size = new System.Drawing.Size(94, 17);
             this.label9.TabIndex = 25;
             this.label9.Text = "Logged in as:";
             // 
             // btnIM
             // 
-            this.btnIM.Location = new System.Drawing.Point(304, 57);
+            this.btnIM.Location = new System.Drawing.Point(405, 70);
+            this.btnIM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIM.Name = "btnIM";
-            this.btnIM.Size = new System.Drawing.Size(141, 23);
+            this.btnIM.Size = new System.Drawing.Size(188, 28);
             this.btnIM.TabIndex = 23;
             this.btnIM.Text = "Incident Management";
             this.btnIM.UseVisualStyleBackColor = true;
@@ -174,9 +190,10 @@ namespace UI
             // 
             // btnDashboard
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(158, 57);
+            this.btnDashboard.Location = new System.Drawing.Point(211, 70);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(141, 23);
+            this.btnDashboard.Size = new System.Drawing.Size(188, 28);
             this.btnDashboard.TabIndex = 22;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -184,19 +201,31 @@ namespace UI
             // 
             // btnUM
             // 
-            this.btnUM.Location = new System.Drawing.Point(452, 57);
+            this.btnUM.Location = new System.Drawing.Point(603, 70);
+            this.btnUM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUM.Name = "btnUM";
-            this.btnUM.Size = new System.Drawing.Size(141, 23);
+            this.btnUM.Size = new System.Drawing.Size(188, 28);
             this.btnUM.TabIndex = 21;
             this.btnUM.Text = "User Management";
             this.btnUM.UseVisualStyleBackColor = true;
             this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
             // 
+            // transferBtn
+            // 
+            this.transferBtn.Location = new System.Drawing.Point(636, 149);
+            this.transferBtn.Name = "transferBtn";
+            this.transferBtn.Size = new System.Drawing.Size(168, 43);
+            this.transferBtn.TabIndex = 26;
+            this.transferBtn.Text = "Transfer";
+            this.transferBtn.UseVisualStyleBackColor = true;
+            this.transferBtn.Click += new System.EventHandler(this.transferBtn_Click);
+            // 
             // Ticket_overview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.transferBtn);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnIM);
@@ -206,6 +235,7 @@ namespace UI
             this.Controls.Add(this.btnCreateTicket);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblTicketView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ticket_overview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket_overview";
@@ -234,5 +264,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Button transferBtn;
     }
 }

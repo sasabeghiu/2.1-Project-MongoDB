@@ -23,25 +23,29 @@ namespace UI
         {
             try
             {
+                //geting info from UI to object
+                User newUser = new User();
+                newUser.First_name = textBoxfname.Text;
+                newUser.Last_name = textBoxlname.Text;
+                newUser.Type = (UserType)Enum.Parse(typeof(UserType), (string)comboBoxuser.SelectedItem);
+                newUser.Email = textBoxemail.Text;
+                newUser.Phone = textBoxphone.Text;
+                newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), (string)comboBoxlocation.SelectedItem);
+
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
-                    //geting info from UI to object
-                    User newUser = new User();
-                    newUser.First_name = textBoxfname.Text;
-                    newUser.Last_name = textBoxlname.Text;
-                    newUser.Type = (UserType)Enum.Parse(typeof(UserType), (string)comboBoxuser.SelectedItem);
-                    newUser.Email = textBoxemail.Text;
-                    newUser.Phone = textBoxphone.Text;
-                    newUser.Location = (UserLocation)Enum.Parse(typeof(UserLocation), (string)comboBoxlocation.SelectedItem);
-
                     userService.AddNewUser(newUser); //passing user to be added to database
+                    MessageBox.Show($"User created successfully!");
+                    btnCancel.PerformClick();
                 }
-                MessageBox.Show($"User created successfully!");
-                btnCancel.PerformClick();
+                else
+                {
+                    MessageBox.Show("Please fill in all the details.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error while creating user: {ex}");
+                DialogResult result = MessageBox.Show("Error whille creating the user, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, 0, $"Exception: {ex}");
             }
         }
 
@@ -158,6 +162,7 @@ namespace UI
             if (!comboBoxuser.Items.Contains(comboBoxuser.Text))
             {
                 MessageBox.Show("Please select a type of user");
+                comboBoxuser.Select();
             }
         }
 
@@ -166,6 +171,7 @@ namespace UI
             if (!comboBoxlocation.Items.Contains(comboBoxlocation.Text))
             {
                 MessageBox.Show("Please select a location/branch");
+                comboBoxlocation.Select();
             }
         }
     }

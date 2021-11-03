@@ -45,7 +45,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                DialogResult result = MessageBox.Show("Error whille creating the user, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, 0, $"Exception: {ex}");
+                DialogResult result = MessageBox.Show("Error whille creating the user, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, 0, $"Exception: {ex}");
             }
         }
 

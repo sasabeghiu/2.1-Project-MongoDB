@@ -30,5 +30,26 @@ namespace Logic
         {
             MongoDatabase.ticketCollection.InsertOne(ticket);
         }
+
+        public void UpdateUsername(Ticket ticket, string selectedValue)
+        {
+            var collection = MongoDatabase.database.GetCollection<Ticket>("Ticket");
+
+            var filter = Builders<Ticket>.Filter.Eq("userId", ticket.User);
+            var update = Builders<Ticket>.Update.Set("userId", selectedValue);
+            var updateResult = collection.UpdateOne(filter, update);
+
+        }
+
+        public void UpdateUserId(Ticket ticket)
+        {
+            /*
+            var collection = MongoDatabase.database.GetCollection<Ticket>("Ticket");
+
+            var filter = Builders<Ticket>.Filter.Eq("userId", ticket.User);
+            var update = Builders<Ticket>.Update.Set("userId", selectedValue);
+            var updateResult = collection.UpdateOne(filter, update);
+            */
+        }
     }
 }

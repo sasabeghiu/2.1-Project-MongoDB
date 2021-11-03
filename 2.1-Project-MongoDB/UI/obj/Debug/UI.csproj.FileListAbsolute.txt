@@ -46,7 +46,6 @@ D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.User_overview.resources
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.GenerateResource.cache
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
-D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.CopyComplete
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.exe
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.pdb
 D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\bin\Debug\snappy32.dll
@@ -206,3 +205,4 @@ D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.csproj.CopyComplete
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.exe
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.pdb
 D:\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.TransferTicket.resources
+D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\UI\obj\Debug\UI.TransferTicket.resources

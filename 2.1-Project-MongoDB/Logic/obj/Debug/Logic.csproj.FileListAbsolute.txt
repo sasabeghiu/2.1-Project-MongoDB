@@ -36,7 +36,6 @@ D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\bin\Debug
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\bin\Debug\System.ValueTuple.xml
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
-D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\obj\Debug\Logic.csproj.CopyComplete
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\obj\Debug\Logic.dll
 D:\Documents\PROGRAMMING\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\obj\Debug\Logic.pdb
 D:\1NHOLLAND\year2\term 1\2.1-Project-MongoDB\2.1-Project-MongoDB\Logic\bin\Debug\snappy32.dll

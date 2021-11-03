@@ -109,16 +109,23 @@ namespace UI
 
         private void transferBtn_Click(object sender, EventArgs e)
         {
-            List<Ticket> tickets = ticketService.getAll();
-            foreach(Ticket ticket in tickets)
+            if (dataTicket.SelectedCells.Count > 0)
             {
-                if(ticket == (Ticket)dataTicket.CurrentRow.DataBoundItem)
-                {
-                    TransferTicket transferForm = new TransferTicket(ticket);
-                    transferForm.ShowDialog(this);
-                }
+                int selectedrowindex = dataTicket.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataTicket.Rows[selectedrowindex];
+                string cellValue = Convert.ToString(selectedRow.Cells["User"].Value);
+
+                TransferTicket transferForm = new TransferTicket(cellValue);//passing user string value to new form
+                transferForm.ShowDialog(this);
+
             }
-            MessageBox.Show("Error whille selecting the ticket, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                MessageBox.Show("Error whille selecting the ticket, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            dataTicket.Rows.Clear();
+            dataTicket.Refresh();
+            Display_All();
         }
     }
 }

@@ -12,13 +12,20 @@ namespace UI
         //creating the objects we will need later on
         private readonly User currentUser;
         private readonly TicketService ticketService = new TicketService();
+        private ArchiveService archiveService = new ArchiveService();
+
         //passing the current user to the form
         public Ticket_overview(User user)
         {
             InitializeComponent();
             currentUser = user;
             lblLogin.Text = user.Last_name + ", " + user.First_name + " (" + user.Type + ")";
+
+            cbTime.Items.Add("3 months");
+            cbTime.Items.Add("6 months");
+            cbTime.Items.Add("1 year");
         }
+
         //form loading depending on user type
         private void Ticket_overview_Load(object sender, EventArgs e)
         {
@@ -105,6 +112,48 @@ namespace UI
             Ticket_overview incidentManagement = new Ticket_overview(currentUser);
             incidentManagement.ShowDialog();
             this.Close();
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbTime.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select time", "Error");
+                    return;
+                }
+
+                int archived = 0;
+                int days = 90;
+                if (cbTime.SelectedIndex == 1)
+                {
+                    days = 180;
+                }
+                else if (cbTime.SelectedIndex == 2)
+                {
+                    days = 365;
+                }
+
+                List<Ticket> tickets = ticketService.getAll();
+
+                foreach (Ticket t in tickets)
+                {
+                    if (t.Date.AddDays(days) < DateTime.Today)
+                    {
+                        archived++;
+                        archiveService.AddTicket(t);
+                        ticketService.RemoveTicket(t);
+                    }
+                }
+
+                MessageBox.Show("("+ archived + ") Tickets older than " +cbTime.SelectedItem.ToString() + " have been moved to archive databse", "Completed");
+                Display_All();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Somwthing went wrong while archiving the tickets", "Error");
+            }
         }
     }
 }

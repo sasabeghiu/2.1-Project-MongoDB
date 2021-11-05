@@ -45,6 +45,9 @@ namespace UI
             this.btnIM = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
+            this.lblArchive = new System.Windows.Forms.Label();
+            this.cbTime = new System.Windows.Forms.ComboBox();
+            this.btnArchive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +96,7 @@ namespace UI
             this.dataTicket.Location = new System.Drawing.Point(50, 191);
             this.dataTicket.Name = "dataTicket";
             this.dataTicket.ReadOnly = true;
-            this.dataTicket.Size = new System.Drawing.Size(698, 238);
+            this.dataTicket.Size = new System.Drawing.Size(698, 220);
             this.dataTicket.TabIndex = 4;
             // 
             // Id
@@ -192,11 +195,42 @@ namespace UI
             this.btnUM.UseVisualStyleBackColor = true;
             this.btnUM.Click += new System.EventHandler(this.BtnUM_Click);
             // 
+            // lblArchive
+            // 
+            this.lblArchive.AutoSize = true;
+            this.lblArchive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblArchive.Location = new System.Drawing.Point(50, 420);
+            this.lblArchive.Name = "lblArchive";
+            this.lblArchive.Size = new System.Drawing.Size(296, 16);
+            this.lblArchive.TabIndex = 26;
+            this.lblArchive.Text = "Move to archive tickets that are older than";
+            // 
+            // cbTime
+            // 
+            this.cbTime.FormattingEnabled = true;
+            this.cbTime.Location = new System.Drawing.Point(368, 420);
+            this.cbTime.Name = "cbTime";
+            this.cbTime.Size = new System.Drawing.Size(121, 21);
+            this.cbTime.TabIndex = 27;
+            // 
+            // btnArchive
+            // 
+            this.btnArchive.Location = new System.Drawing.Point(622, 418);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Size = new System.Drawing.Size(126, 23);
+            this.btnArchive.TabIndex = 28;
+            this.btnArchive.Text = "Move to Archive";
+            this.btnArchive.UseVisualStyleBackColor = true;
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            // 
             // Ticket_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnArchive);
+            this.Controls.Add(this.cbTime);
+            this.Controls.Add(this.lblArchive);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnIM);
@@ -234,5 +268,8 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Label lblArchive;
+        private System.Windows.Forms.ComboBox cbTime;
+        private System.Windows.Forms.Button btnArchive;
     }
 }

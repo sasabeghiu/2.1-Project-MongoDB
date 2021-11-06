@@ -2,3 +2,9 @@
 2.1-Project-MongoDB/.vs/2.1-Project-MongoDB/v16/.suo
 2.1-Project-MongoDB/.vs/2.1-Project-MongoDB/v16/.suo
 *.cache
+/2.1-Project-MongoDB/UI/UpdateTicket.resx
+/2.1-Project-MongoDB/UI/UpdateTicket.Designer.cs
+/2.1-Project-MongoDB/UI/UpdateTicket.cs
+/2.1-Project-MongoDB/UI/TransferTicket.resx
+/2.1-Project-MongoDB/UI/TransferTicket.Designer.cs
+/2.1-Project-MongoDB/UI/TransferTicket.cs

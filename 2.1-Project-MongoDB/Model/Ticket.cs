@@ -24,6 +24,27 @@ namespace Model
             Description = desciption;
         }
 
+        public DateTime DeadlineValue(DateTime startDate, TicketDeadline deadline)
+        {
+            if (deadline == TicketDeadline.Days7)
+            {
+                return startDate.AddDays(7);
+            }
+            else if (deadline == TicketDeadline.Days14)
+            {
+                return startDate.AddDays(14);
+            }
+            else if (deadline == TicketDeadline.Days28)
+            {
+                return startDate.AddDays(28);
+            }
+            else if (deadline == TicketDeadline.Months6)
+            {
+                return startDate.AddDays(183);
+            }
+            return startDate;
+        }
+
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId id { get; set; }
 

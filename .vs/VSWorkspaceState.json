@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\2.1-Project-MongoDB",
+    "\\2.1-Project-MongoDB\\UI"
   ],
+  "SelectedNode": "\\2.1-Project-MongoDB\\UI\\Dashboard.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

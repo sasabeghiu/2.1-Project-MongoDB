@@ -38,9 +38,6 @@ namespace Logic
         {
             var filter = Builders<Ticket>.Filter.Eq("_id",ticket.id);
             var deleteResult = MongoDatabase.ticketCollection.DeleteOne(filter);
-
-
-            //MongoDatabase.ticketCollection.DeleteOne(ticket);
         }
     }
 }

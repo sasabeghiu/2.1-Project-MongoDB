@@ -51,5 +51,12 @@ namespace Logic
             var updateResult = collection.UpdateOne(filter, update);
             */
         }
+
+        public void UpdateStatus(ObjectId ticketId, TicketStatus status)
+        {
+            var filter = Builders<Ticket>.Filter.Eq("_id", ticketId);
+            var update = Builders<Ticket>.Update.Set("status", status);
+            var result = MongoDatabase.ticketCollection.UpdateOne(filter, update);
+        }
     }
 }

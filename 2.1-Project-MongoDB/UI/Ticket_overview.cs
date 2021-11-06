@@ -36,9 +36,33 @@ namespace UI
         private void Display_All()
         {
             List<Ticket> tickets = ticketService.getAll();
-            foreach (Ticket ticket in tickets)
+            //foreach (Ticket ticket in tickets)
+            //{
+            //    //since we cant make a enum starting with a int, i did a simple if statement
+            //    string deadline = "";
+            //    if (ticket.Deadline == TicketDeadline.Days7)
+            //    {
+            //        deadline = "7 Days";
+            //    }
+            //    else if (ticket.Deadline == TicketDeadline.Days14)
+            //    {
+            //        deadline = "14 Days";
+            //    }
+            //    else if (ticket.Deadline == TicketDeadline.Days28)
+            //    {
+            //        deadline = "28 Days";
+            //    }
+            //    else
+            //    {
+            //        deadline = "6 months";
+            //    }
+            //    dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, deadline, ticket.Status);
+            //}
+            
+            // Using a for loop, so you can add a ticket to the tag as a Ticket object
+            for (int i = 0; i < tickets.Count; i++)
             {
-                //since we cant make a enum starting with a int, i did a simple if statement
+                Ticket ticket = tickets[i];
                 string deadline = "";
                 if (ticket.Deadline == TicketDeadline.Days7)
                 {
@@ -56,7 +80,10 @@ namespace UI
                 {
                     deadline = "6 months";
                 }
+
                 dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, deadline, ticket.Status);
+                // Saving the Ticket in the tag of each row
+                dataTicket.Rows[i].Tag = tickets[i];
             }
         }
         //filter tickets by subject
@@ -69,6 +96,9 @@ namespace UI
             {
                 dataTicket.Rows.Add(ticket.id, ticket.Subject, ticket.User, ticket.Date.ToString("dd/MM//yyyy"), ticket.Priority, ticket.Deadline, ticket.Status);
             }
+
+            
+
             if (txtFilter.Text == "")
             {
                 Display_All();
@@ -126,6 +156,42 @@ namespace UI
             dataTicket.Rows.Clear();
             dataTicket.Refresh();
             Display_All();
+        }
+
+
+        // Opens the UpdatTicket view to update the ticket status (thank you Sasa)
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
+        {
+            if (dataTicket.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataTicket.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataTicket.Rows[selectedrowindex];
+                Ticket ticket = (Ticket)selectedRow.Tag;
+
+                UpdateTicket update = new UpdateTicket(ticket, currentUser);//passing user string value to new form
+                update.ShowDialog(this);
+
+            }
+            else
+            {
+                MessageBox.Show("Error whille selecting the ticket, please try again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            dataTicket.Rows.Clear();
+            dataTicket.Refresh();
+            Display_All();
+        }
+
+        // Checks if selected row's ticket is closed
+        private void dataTicket_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(((Ticket)dataTicket.SelectedRows[0].Tag).Status == TicketStatus.Closed)
+            {
+                btnUpdateStatus.Enabled = false;
+            }
+            else
+            {
+                btnUpdateStatus.Enabled = true;
+            }
         }
     }
 }

@@ -46,6 +46,7 @@ namespace UI
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnUM = new System.Windows.Forms.Button();
             this.transferBtn = new System.Windows.Forms.Button();
+            this.btnUpdateStatus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTicket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace UI
             // txtFilter
             // 
             this.txtFilter.Location = new System.Drawing.Point(67, 167);
-            this.txtFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(429, 22);
             this.txtFilter.TabIndex = 1;
@@ -73,7 +74,7 @@ namespace UI
             // btnCreateTicket
             // 
             this.btnCreateTicket.Location = new System.Drawing.Point(829, 149);
-            this.btnCreateTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateTicket.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateTicket.Name = "btnCreateTicket";
             this.btnCreateTicket.Size = new System.Drawing.Size(168, 43);
             this.btnCreateTicket.TabIndex = 2;
@@ -95,13 +96,14 @@ namespace UI
             this.Deadline,
             this.Status});
             this.dataTicket.Location = new System.Drawing.Point(67, 235);
-            this.dataTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataTicket.Margin = new System.Windows.Forms.Padding(4);
             this.dataTicket.Name = "dataTicket";
             this.dataTicket.ReadOnly = true;
             this.dataTicket.RowHeadersWidth = 51;
             this.dataTicket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTicket.Size = new System.Drawing.Size(931, 293);
             this.dataTicket.TabIndex = 4;
+            this.dataTicket.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTicket_CellContentClick);
             // 
             // Id
             // 
@@ -180,7 +182,7 @@ namespace UI
             // btnIM
             // 
             this.btnIM.Location = new System.Drawing.Point(405, 70);
-            this.btnIM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIM.Margin = new System.Windows.Forms.Padding(4);
             this.btnIM.Name = "btnIM";
             this.btnIM.Size = new System.Drawing.Size(188, 28);
             this.btnIM.TabIndex = 23;
@@ -191,7 +193,7 @@ namespace UI
             // btnDashboard
             // 
             this.btnDashboard.Location = new System.Drawing.Point(211, 70);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(188, 28);
             this.btnDashboard.TabIndex = 22;
@@ -202,7 +204,7 @@ namespace UI
             // btnUM
             // 
             this.btnUM.Location = new System.Drawing.Point(603, 70);
-            this.btnUM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUM.Margin = new System.Windows.Forms.Padding(4);
             this.btnUM.Name = "btnUM";
             this.btnUM.Size = new System.Drawing.Size(188, 28);
             this.btnUM.TabIndex = 21;
@@ -212,7 +214,7 @@ namespace UI
             // 
             // transferBtn
             // 
-            this.transferBtn.Location = new System.Drawing.Point(636, 149);
+            this.transferBtn.Location = new System.Drawing.Point(654, 149);
             this.transferBtn.Name = "transferBtn";
             this.transferBtn.Size = new System.Drawing.Size(168, 43);
             this.transferBtn.TabIndex = 26;
@@ -220,11 +222,22 @@ namespace UI
             this.transferBtn.UseVisualStyleBackColor = true;
             this.transferBtn.Click += new System.EventHandler(this.transferBtn_Click);
             // 
+            // btnUpdateStatus
+            // 
+            this.btnUpdateStatus.Location = new System.Drawing.Point(531, 149);
+            this.btnUpdateStatus.Name = "btnUpdateStatus";
+            this.btnUpdateStatus.Size = new System.Drawing.Size(117, 43);
+            this.btnUpdateStatus.TabIndex = 26;
+            this.btnUpdateStatus.Text = "Update";
+            this.btnUpdateStatus.UseVisualStyleBackColor = true;
+            this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
+            // 
             // Ticket_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnUpdateStatus);
             this.Controls.Add(this.transferBtn);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.label9);
@@ -235,7 +248,7 @@ namespace UI
             this.Controls.Add(this.btnCreateTicket);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblTicketView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ticket_overview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket_overview";
@@ -265,5 +278,6 @@ namespace UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button transferBtn;
+        private System.Windows.Forms.Button btnUpdateStatus;
     }
 }
